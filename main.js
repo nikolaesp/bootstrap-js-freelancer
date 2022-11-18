@@ -23,7 +23,7 @@ function calcolaPrezzo(event) {
     let prmcd = promoCodice(promocode);
     let tipo = document.getElementById("inputState").value;
     let ore = parseFloat(document.getElementById("oreHtml").value);
-    let prezzo = 3.140;
+    let prezzo = 0.0;
     if (tipo == 1) {
         prezzo = ore * 15.3;
     }
@@ -36,10 +36,10 @@ function calcolaPrezzo(event) {
 
     if (prmcd) {
         prezzo = prezzo * 0.75;
-        document.getElementById("prezzoHtml").innerText = "\t\t"+prezzo+"€";
+        document.getElementById("prezzoHtml").innerText = "\t\t" + prezzo + "€";
 
     } else {
-        document.getElementById("prezzoHtml").innerText = "\t\t"+prezzo+"€";
+        document.getElementById("prezzoHtml").innerText = "\t\t" + prezzo + "€";
     }
 
     console.log(`
@@ -55,4 +55,22 @@ function promoCodice(promo) {
         return true;
     else
         return false;
+}
+
+//Inoltre se il codice fornito è valido, eliminare quel codice dall’elenco dei codici sconto disponibili, il codice sconto non sarà più usabile.
+
+
+
+//bonus funzione  guarda la promo codice se e valio e torna  codice e valido e lo remove di validi codici se no ne e valido o lo usi piu di una volta torna non e valido
+function bonusPromo(promo) {
+    let codes = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
+    let flag = false;
+    for (let i = 0; i < codes.length; i++) {
+        if (promo == codes[i]) {
+            codes.splice(i, 1);
+            flag = true;
+        }
+
+    }
+    return flag;
 }
