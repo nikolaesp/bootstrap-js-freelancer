@@ -13,14 +13,14 @@ Mostrare il risultato del calcolo del prezzo finale in una “forma umana” in 
 output : Il prezzo finale e di: 153.75
 */
 
-
+let codes = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
 
 
 //calcula il prezzo del lavoro a base di tipo di lavoro e calcula se hai sconto o no
 function calcolaPrezzo(event) {
     event.preventDefault();
     let promocode = document.getElementById("promocode").value;
-    let prmcd = bonusPromo(promocode);
+    let prmcd = bonusPromo(promocode,codes);
     let tipo = document.getElementById("inputState").value;
     let ore = parseFloat(document.getElementById("oreHtml").value);
     let prezzo = 0.0;
@@ -64,12 +64,12 @@ function promoCodice(promo) {
 
 
 //bonus funzione  guarda la promo codice se e valio e torna  codice e valido e lo remove di validi codici se no ne e valido o lo usi piu di una volta torna non e valido
-function bonusPromo(promo) {
-    let codes = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
+function bonusPromo(promo,lista) {
+    
     let flag = false;
-    for (let i = 0; i < codes.length; i++) {
-        if (promo == codes[i]) {
-          delete codes[i];
+    for (let i = 0; i < lista.length; i++) {
+        if (promo == lista[i]) {
+          delete lista[i];
             flag = true;
         }
 
