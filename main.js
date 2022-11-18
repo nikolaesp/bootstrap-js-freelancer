@@ -37,8 +37,10 @@ function calcolaPrezzo(event) {
     if (prmcd) {
         prezzo = prezzo * 0.75;
         document.getElementById("prezzoHtml").innerText = "\t\t" + prezzo + "€";
+        document.getElementById("promocode").innerHTML.style.color = "green"; 
 
     } else {
+        document.getElementById("promocode").innerHTML.style.color = "red"; 
         document.getElementById("prezzoHtml").innerText = "\t\t" + prezzo + "€";
     }
 
