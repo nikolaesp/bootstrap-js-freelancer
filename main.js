@@ -17,37 +17,41 @@ let codes = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
 
 //Super Bonus: Creare una struttura dati adeguata per contenere tutte le informazioni relative ai progetti presenti nella sezione “Portfolio”. Rimuovere quindi le card dal markup nel file html e stamparle in pagina dinamicamente tramite l’utilizzo di JavaScript.
 let element = document.getElementById("carte");
-    element.style.display = "none";
-  
-let portfolio =[
-    {nome: "Cabin Website",tipo: "Web Design",ore: 240 ,foto:"./img/portfolio/cabin.png"},
-    {nome: "Cake Website",tipo: "Web Design",ore: 132,foto:"./img/portfolio/cake.png"},
-    {nome: "Game Website",tipo: "Web Plugin",ore: 860,foto:"./img/portfolio/game.png"},
-    {nome: "Submarine",tipo: "Micro controller",ore: 1542,foto:"./img/portfolio/circus.png"},
-    {nome: "Safe Website",tipo: "Web Design",ore: 1263 ,foto:"./img/portfolio/safe.png"},
-    {nome: "Robotic Arm",tipo: "PLC",ore: 268,foto:"./img/portfolio/submarine.png"}];
+element.style.display = "none";
+
+let portfolio = [
+    { nome: "Cabin Website", tipo: "Web Design", ore: 240, foto: "./img/portfolio/cabin.png" },
+    { nome: "Cake Website", tipo: "Web Design", ore: 132, foto: "./img/portfolio/cake.png" },
+    { nome: "Game Website", tipo: "Web Plugin", ore: 860, foto: "./img/portfolio/game.png" },
+    { nome: "Submarine", tipo: "Micro controller", ore: 1542, foto: "./img/portfolio/circus.png" },
+    { nome: "Safe Website", tipo: "Web Design", ore: 1263, foto: "./img/portfolio/safe.png" },
+    { nome: "Robotic Arm", tipo: "PLC", ore: 268, foto: "./img/portfolio/submarine.png" }];
 
 // stampa le projecti in variable che la uso per stampare in HTML doppo
-    let htmlCode = ``;
-   portfolio.forEach(element => {
-    htmlCode = htmlCode + 
-    `
+let htmlCode = ``;
+portfolio.forEach(element => {
+    htmlCode = htmlCode +
+        `
 
-      <div class="col-3 col-md-4 g-3 bg-info border-white p-0 b-0 m-3 bm-5">
-      <img class="img-fluid w-70 m-0 p-0 b-0" src="${element.foto}" alt="${element.nome}">
-      <p>Nome di progetto: ${element.nome}</p>
+      <div class="col-4 col-md-4 g-3 bg-light border-white p-0 b-0 m-3 bm-5">
+
+<div class="card" style="width: 18rem;">
+    <img class="img-fluid  m-0 p-0 b-0" src="${element.foto}" alt="${element.nome}">
+    <div class="card-body">
+      <h5>Nome di progetto: ${element.nome}</h5>
       <p>Tipo di progetto: ${element.tipo}</p>
       <p>Ore di progetto:  ${element.ore}</p>
       <a href="#" class="btn btn-primary mx-2">Preview</a>
       <a href="#" class="btn btn-outline-info mx-2">Visit</a>
-     </div>
-
+   </div>
+  </div>
+</div>
   `;
-   });
+});
 let cards = document.getElementById("portfolio");
 //seleziona dove mettere html codice e puoi lo inserisce
 cards.innerHTML = htmlCode;
-   
+
 
 
 
