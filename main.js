@@ -37,11 +37,11 @@ function calcolaPrezzo(event) {
     if (prmcd) {
         prezzo = prezzo * 0.75;
         document.getElementById("prezzoHtml").innerText = "\t\t" + prezzo + "€";
-        document.getElementById("promocode").innerHTML.style.color = "green"; 
+        document.getElementById("promocode").style.color = "green"; 
 
     } else {
         document.getElementById("prezzoHtml").innerText = "\t\t" + prezzo + "€";
-        document.getElementById("promocode").innerHTML.style.color = "red"; 
+        document.getElementById("promocode").style.color = "blue";
     }
 
     console.log(`
