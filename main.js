@@ -33,7 +33,7 @@ portfolio.forEach(element => {
     htmlCode = htmlCode +
         `
 
-<div class="col-4 col-md-4 g-3 bg-light border-white p-0 b-0 m-3 bm-5 w-auto">
+<div class="col-sm-4 g-3 bg-light border-white p-0 b-0 m-3 bm-5 w-auto">
 
 <div class="card" style="width: 18rem;">
     <img class="img-fluid  m-0 p-0 b-0" src="${element.foto}" alt="${element.nome}">
