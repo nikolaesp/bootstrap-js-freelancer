@@ -12,8 +12,13 @@ Mostrare il risultato del calcolo del prezzo finale in una “forma umana” in 
 - Ricordatevi che il form ha un comportamento “strano” quando fate click sul bottone Send che è di tipo submit (type=submit).
 output : Il prezzo finale e di: 153.75
 */
-
+//lista di codici sconto
 let codes = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
+
+//Super Bonus: Creare una struttura dati adeguata per contenere tutte le informazioni relative ai progetti presenti nella sezione “Portfolio”. Rimuovere quindi le card dal markup nel file html e stamparle in pagina dinamicamente tramite l’utilizzo di JavaScript.
+let element = document.getElementById("carte");
+        element.style.display = "none";
+
 
 
 //calcula il prezzo del lavoro a base di tipo di lavoro e calcula se hai sconto o no

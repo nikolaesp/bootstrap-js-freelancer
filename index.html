@@ -33,8 +33,12 @@
   <div class="container text-center">
 
     <h1 class="my-3">PORTFOLIO</h1>
-    <div id="portfolio">
+    <div class="container">
+      <div class="row" id="portfolio">
 
+
+        
+      </div>
 
 
     </div>
@@ -78,121 +82,123 @@
           </div>
         </div>
       </div>
-    </div>
 
 
 
-    <div class="container text-center mb-5">
 
-      <div class="row g-4 mb-5">
-        <div class="col-sm-4">
-          <div class="card h-100">
-            <img src="./img/portfolio/game.png" class="card-img-top" alt="game">
-            <div class="card-body">
-              <h5 class="card-title text-center">Game Website</h5>
+      <div class="container text-center mb-5">
 
-              <a href="#" class="btn btn-primary mx-2">Preview</a>
-              <a href="#" class="btn btn-outline-info mx-2">Visit</a>
+        <div class="row g-4 mb-5">
+          <div class="col-sm-4">
+            <div class="card h-100">
+              <img src="./img/portfolio/game.png" class="card-img-top" alt="game">
+              <div class="card-body">
+                <h5 class="card-title text-center">Game Website</h5>
+
+                <a href="#" class="btn btn-primary mx-2">Preview</a>
+                <a href="#" class="btn btn-outline-info mx-2">Visit</a>
+
+              </div>
 
             </div>
-
           </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card h-100">
-            <img src="./img/portfolio/safe.png" class="card-img-top" alt="safe">
-            <div class="card-body">
-              <h5 class="card-title text-center">Safe Website</h5>
-              <a href="#" class="btn btn-primary mx-2">Preview</a>
-              <a href="#" class="btn btn-outline-info mx-2">Visit</a>
-            </div>
+          <div class="col-sm-4">
+            <div class="card h-100">
+              <img src="./img/portfolio/safe.png" class="card-img-top" alt="safe">
+              <div class="card-body">
+                <h5 class="card-title text-center">Safe Website</h5>
+                <a href="#" class="btn btn-primary mx-2">Preview</a>
+                <a href="#" class="btn btn-outline-info mx-2">Visit</a>
+              </div>
 
+            </div>
           </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card h-100">
-            <img src="./img/portfolio/submarine.png" class="card-img-top" alt="submarine">
-            <div class="card-body">
-              <h5 class="card-title text-center">Submarine</h5>
-              <a href="#" class="btn btn-primary mx-2">Preview</a>
-              <a href="#" class="btn btn-outline-info mx-2">Visit</a>
+          <div class="col-sm-4">
+            <div class="card h-100">
+              <img src="./img/portfolio/submarine.png" class="card-img-top" alt="submarine">
+              <div class="card-body">
+                <h5 class="card-title text-center">Submarine</h5>
+                <a href="#" class="btn btn-primary mx-2">Preview</a>
+                <a href="#" class="btn btn-outline-info mx-2">Visit</a>
+
+              </div>
 
             </div>
-
           </div>
         </div>
       </div>
     </div>
 
 
-  </div>
-  <div class="container-fluid bg-info mx-0">
-    <div class="row  ">
 
-      <div class="col-12 text-center mx-3 mb-4 ">
-        <h1 class="mt-4">WANT AN OFFER?</h1>
+    <div class="container-fluid bg-info mx-0">
+      <div class="row  ">
+
+        <div class="col-12 text-center mx-3 mb-4 ">
+          <h1 class="mt-4">WANT AN OFFER?</h1>
+        </div>
+      </div>
+
+      <form id="forma-lavoro" onsubmit="calcolaPrezzo(event)">
+        <div class="row  justify-content-center g-1 mx-3">
+
+          <div class="col-sm-6">
+            <label for="FirstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" placeholder="First Name" aria-label="First Name">
+          </div>
+
+          <div class="col-sm-6">
+            <label for="LastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" placeholder="Last name" aria-label="Last Name">
+          </div>
+
+          <div class="col-sm-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+
+          <div class="col-sm-6">
+            <label for="HoursRequested" class="form-label">Hours Requested</label>
+            <input id="oreHtml" type="number" class="form-control" placeholder="Hours Requested"
+              aria-label="Hours Requested">
+          </div>
+
+
+          <div class="form-group col-sm-6">
+            <label for="inputState">Type of work</label>
+            <select id="inputState" class="form-control">
+              <option value="1">Frontend Development</option>
+              <option value="2">Backend Development</option>
+              <option value="3">Project Analisys</option>
+            </select>
+          </div>
+
+
+          <div class="col-sm-6 mb-4">
+            <label for="Discount Code" class="form-label">Discount Code</label>
+            <input id="promocode" type="text" class="form-control" placeholder="Discount code"
+              aria-label="Discount code">
+          </div>
+
+          <div class="col-12">
+            <div class="form-outline">
+              <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
+              <label class="form-label" for="textAreaExample">Message</label>
+            </div>
+          </div>
+
+          <div class="col-8-md-d ">
+            <button id="sendHtml" type="submit" class="btn btn-primary">Send</button>
+
+          </div>
+      </form>
+    </div>
+
+    <div class="row">
+      <div class="col-12-md-6 ml-5">
+        <h3 id="prezzoHtml"></h3>
       </div>
     </div>
-
-    <form id="forma-lavoro" onsubmit="calcolaPrezzo(event)">
-      <div class="row  justify-content-center g-1 mx-3">
-
-        <div class="col-sm-6">
-          <label for="FirstName" class="form-label">First Name</label>
-          <input type="text" class="form-control" placeholder="First Name" aria-label="First Name">
-        </div>
-
-        <div class="col-sm-6">
-          <label for="LastName" class="form-label">Last Name</label>
-          <input type="text" class="form-control" placeholder="Last name" aria-label="Last Name">
-        </div>
-
-        <div class="col-sm-6">
-          <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4">
-        </div>
-
-        <div class="col-sm-6">
-          <label for="HoursRequested" class="form-label">Hours Requested</label>
-          <input id="oreHtml" type="number" class="form-control" placeholder="Hours Requested"
-            aria-label="Hours Requested">
-        </div>
-
-
-        <div class="form-group col-sm-6">
-          <label for="inputState">Type of work</label>
-          <select id="inputState" class="form-control">
-            <option value="1">Frontend Development</option>
-            <option value="2">Backend Development</option>
-            <option value="3">Project Analisys</option>
-          </select>
-        </div>
-
-
-        <div class="col-sm-6 mb-4">
-          <label for="Discount Code" class="form-label">Discount Code</label>
-          <input id="promocode" type="text" class="form-control" placeholder="Discount code" aria-label="Discount code">
-        </div>
-
-        <div class="col-12">
-          <div class="form-outline">
-            <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
-            <label class="form-label" for="textAreaExample">Message</label>
-          </div>
-        </div>
-
-        <div class="col-8-md-d ">
-          <button id="sendHtml" type="submit" class="btn btn-primary">Send</button>
-
-        </div>
-    </form>
-  </div>
-
-  <div class="row">
-    <div class="col-12-md-6 ml-5">
-      <h3 id="prezzoHtml"></h3>
-    </div>
-  </div>
   </div>
 
 
