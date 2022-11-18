@@ -20,12 +20,12 @@ let element = document.getElementById("carte");
     element.style.display = "none";
   
 let portfolio =[
-    {nome: "Cabin Website",tipo: "Web Design",ore: 240},
-    {nome: "Cake Website",tipo: "Web Design",ore: 132},
-    {nome: "Game Website",tipo: "Web Plugin",ore: 860},
-    {nome: "Submarine",tipo: "Micro controller",ore: 1542},
-    {nome: "Safe Website",tipo: "Web Design",ore: 1263},
-    {nome: "Robotic Arm",tipo: "PLC",ore: 268},];
+    {nome: "Cabin Website",tipo: "Web Design",ore: 240 ,foto:"./img/portfolio/cabin.png"},
+    {nome: "Cake Website",tipo: "Web Design",ore: 132,foto:"./img/portfolio/cake.png"},
+    {nome: "Game Website",tipo: "Web Plugin",ore: 860,foto:"./img/portfolio/game.png"},
+    {nome: "Submarine",tipo: "Micro controller",ore: 1542,foto:"./img/portfolio/circus.png"},
+    {nome: "Safe Website",tipo: "Web Design",ore: 1263 ,foto:"./img/portfolio/safe.png"},
+    {nome: "Robotic Arm",tipo: "PLC",ore: 268,foto:"./img/portfolio/submarine.png"}];
 
 // stampa le projecti in variable che la uso per stampare in HTML doppo
     let htmlCode = ``;
@@ -33,10 +33,13 @@ let portfolio =[
     htmlCode = htmlCode + 
     `
 
-      <div class="col-3 col-md-4 g-3 bg-info border-white p-0 b-0 m-3">
+      <div class="col-3 col-md-4 g-3 bg-info border-white p-0 b-0 m-3 bm-5">
+      <img class="img-fluid w-70 m-0 p-0 b-0" src="${element.foto}" alt="${element.nome}">
       <p>Nome di progetto: ${element.nome}</p>
       <p>Tipo di progetto: ${element.tipo}</p>
       <p>Ore di progetto:  ${element.ore}</p>
+      <a href="#" class="btn btn-primary mx-2">Preview</a>
+      <a href="#" class="btn btn-outline-info mx-2">Visit</a>
      </div>
 
   `;
