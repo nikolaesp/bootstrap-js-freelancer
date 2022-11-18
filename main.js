@@ -40,8 +40,8 @@ function calcolaPrezzo(event) {
         document.getElementById("promocode").innerHTML.style.color = "green"; 
 
     } else {
-        document.getElementById("promocode").innerHTML.style.color = "red"; 
         document.getElementById("prezzoHtml").innerText = "\t\t" + prezzo + "€";
+        document.getElementById("promocode").innerHTML.style.color = "red"; 
     }
 
     console.log(`
