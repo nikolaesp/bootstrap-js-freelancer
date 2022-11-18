@@ -22,8 +22,8 @@ function calcolaPrezzo(event) {
     let promocode = document.getElementById("promocode").value;
     let prmcd = promoCodice(promocode);
     let tipo = document.getElementById("inputState").value;
-    let ore = parseInt(document.getElementById("oreHtml").value);
-    let prezzo = 0.0;
+    let ore = parseFloat(document.getElementById("oreHtml").value);
+    let prezzo = 3.140;
     if (tipo == 1) {
         prezzo = ore * 15.3;
     }
@@ -36,10 +36,10 @@ function calcolaPrezzo(event) {
 
     if (prmcd) {
         prezzo = prezzo * 0.75;
-        document.getElementById("prezzoHtml").innerText = prezzo;
+        document.getElementById("prezzoHtml").innerText = "\t\t"+prezzo+"€";
 
     } else {
-        document.getElementById("prezzoHtml").innerText = prezzo;
+        document.getElementById("prezzoHtml").innerText = "\t\t"+prezzo+"€";
     }
 
     console.log(`
