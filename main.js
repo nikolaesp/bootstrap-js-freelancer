@@ -10,6 +10,7 @@ Se il codice inserito non è valido, informate l’utente che il codice è sbagl
 Mostrare il risultato del calcolo del prezzo finale in una “forma umana” in un apposito tag HTML appena sotto il bottone send.
 - Ricordatevi che se non state bene attenti, Javascript vi fa le magie con i tipi :slightly_smiling_face:
 - Ricordatevi che il form ha un comportamento “strano” quando fate click sul bottone Send che è di tipo submit (type=submit).
+output : Il prezzo finale e di: 153.75
 */
 
 
