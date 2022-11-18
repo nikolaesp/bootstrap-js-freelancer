@@ -19,10 +19,10 @@ output : Il prezzo finale e di: 153.75
 //calcula il prezzo del lavoro a base di tipo di lavoro e calcula se hai sconto o no
 function calcolaPrezzo(event) {
     event.preventDefault();
-    let promocode=document.getElementById("promocode").value;
+    let promocode = document.getElementById("promocode").value;
     let prmcd = promoCodice(promocode);
-    let tipo = document.getElementById("selecttipo").value;
-    let ore =  document.getElementById("oreHtml").value;
+    let tipo = document.getElementById("inputState").value;
+    let ore = parseInt(document.getElementById("oreHtml").value);
     let prezzo = 0.0;
     if (tipo == 1) {
         prezzo = ore * 15.3;
@@ -34,11 +34,11 @@ function calcolaPrezzo(event) {
         prezzo = ore * 33.60;
     }
 
-    if(prmcd){
-        prezzo = prezzo*0.75;
+    if (prmcd) {
+        prezzo = prezzo * 0.75;
         document.getElementById("prezzoHtml").innerText = prezzo;
 
-    }else{
+    } else {
         document.getElementById("prezzoHtml").innerText = prezzo;
     }
 
