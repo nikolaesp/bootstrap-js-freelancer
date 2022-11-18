@@ -131,55 +131,56 @@
 
 
 
-
-      <div class="col-sm-6">
-        <label for="FirstName" class="form-label">First Name</label>
-        <input type="text" class="form-control" placeholder="First Name" aria-label="First Name">
-      </div>
-
-      <div class="col-sm-6">
-        <label for="LastName" class="form-label">Last Name</label>
-        <input type="text" class="form-control" placeholder="Last name" aria-label="Last Name">
-      </div>
-
-      <div class="col-sm-6">
-        <label for="inputEmail4" class="form-label">Email</label>
-        <input type="email" class="form-control" id="inputEmail4">
-      </div>
-
-      <div class="col-sm-6">
-        <label for="HoursRequested" class="form-label">Hours Requested</label>
-        <input id="oreHtml" type="number" class="form-control" placeholder="Hours Requested" aria-label="Hours Requested">
-      </div>
-
-
-      <div class="form-group col-sm-6">
-        <label for="inputState">Type of work</label>
-        <select id="inputState" class="form-control">
-          <option value="1">Frontend Development</option>
-          <option value="2">Backend Development</option>
-          <option value="3">Project Analisys</option>
-        </select>
-      </div>
-
-
-      <div class="col-sm-6 mb-4">
-        <label for="Discount Code" class="form-label">Discount Code</label>
-        <input type="text" class="form-control" placeholder="Discount code" aria-label="Discount code">
-      </div>
-
-      <div class="col-12">
-        <div class="form-outline">
-          <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
-          <label class="form-label" for="textAreaExample">Message</label>
+      <form id="forma-lavoro" onsubmit="btnCalculaPrezzo(event)">
+        <div class="col-sm-6">
+          <label for="FirstName" class="form-label">First Name</label>
+          <input type="text" class="form-control" placeholder="First Name" aria-label="First Name">
         </div>
-      </div>
 
-      <div class="col-8-md-d ">
-        <button id="sendHtml" type="button" class="btn btn-warning">Send</button>
+        <div class="col-sm-6">
+          <label for="LastName" class="form-label">Last Name</label>
+          <input type="text" class="form-control" placeholder="Last name" aria-label="Last Name">
+        </div>
 
-      </div>
+        <div class="col-sm-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4">
+        </div>
 
+        <div class="col-sm-6">
+          <label for="HoursRequested" class="form-label">Hours Requested</label>
+          <input id="oreHtml" type="number" class="form-control" placeholder="Hours Requested"
+            aria-label="Hours Requested">
+        </div>
+
+
+        <div class="form-group col-sm-6">
+          <label for="inputState">Type of work</label>
+          <select id="inputState" class="form-control">
+            <option value="1">Frontend Development</option>
+            <option value="2">Backend Development</option>
+            <option value="3">Project Analisys</option>
+          </select>
+        </div>
+
+
+        <div class="col-sm-6 mb-4">
+          <label for="Discount Code" class="form-label">Discount Code</label>
+          <input type="text" class="form-control" placeholder="Discount code" aria-label="Discount code">
+        </div>
+
+        <div class="col-12">
+          <div class="form-outline">
+            <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
+            <label class="form-label" for="textAreaExample">Message</label>
+          </div>
+        </div>
+
+        <div class="col-8-md-d ">
+          <button id="sendHtml" type="button" class="btn btn-warning">Send</button>
+
+        </div>
+      </form>
     </div>
     <div class="row">
       <div class="col-12-md-6 ml-5">
