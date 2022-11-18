@@ -20,7 +20,7 @@ output : Il prezzo finale e di: 153.75
 function calcolaPrezzo(event) {
     event.preventDefault();
     let promocode = document.getElementById("promocode").value;
-    let prmcd = promoCodice(promocode);
+    let prmcd = bonusPromo(promocode);
     let tipo = document.getElementById("inputState").value;
     let ore = parseFloat(document.getElementById("oreHtml").value);
     let prezzo = 0.0;
@@ -36,12 +36,12 @@ function calcolaPrezzo(event) {
 
     if (prmcd) {
         prezzo = prezzo * 0.75;
-        document.getElementById("prezzoHtml").innerText = "\t\t" + prezzo + "€";
+        document.getElementById("prezzoHtml").innerText = "\t\t" + prezzo.toFixed(2) + "€";
         document.getElementById("promocode").style.color = "green"; 
 
     } else {
-        document.getElementById("prezzoHtml").innerText = "\t\t" + prezzo + "€";
-        document.getElementById("promocode").style.color = "blue";
+        document.getElementById("prezzoHtml").innerText = "\t\t" + prezzo.toFixed(2) + "€";
+        document.getElementById("promocode").style.color = "red";
     }
 
     console.log(`
@@ -69,7 +69,7 @@ function bonusPromo(promo) {
     let flag = false;
     for (let i = 0; i < codes.length; i++) {
         if (promo == codes[i]) {
-            codes.splice(i, 1);
+          delete codes[i];
             flag = true;
         }
 
