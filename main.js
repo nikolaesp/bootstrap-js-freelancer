@@ -41,11 +41,13 @@ let portfolio =[
 
   `;
    });
-    console.log(htmlCode);
 let cards = document.getElementById("portfolio");
 //seleziona dove mettere html codice e puoi lo inserisce
 cards.innerHTML = htmlCode;
    
+
+
+
 
 
 
