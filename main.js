@@ -17,7 +17,16 @@ let codes = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
 
 //Super Bonus: Creare una struttura dati adeguata per contenere tutte le informazioni relative ai progetti presenti nella sezione “Portfolio”. Rimuovere quindi le card dal markup nel file html e stamparle in pagina dinamicamente tramite l’utilizzo di JavaScript.
 let element = document.getElementById("carte");
-        element.style.display = "none";
+element.style.display = "none";
+  
+let portfolio =[
+    {nome: "Cabin Website",tipo: "Web Design",ore: 240},
+    {nome: "Cake Website",tipo: "Web Design",ore: 132},
+    {nome: "Game Website",tipo: "Web Plugin",ore: 860},
+    {nome: "Submarine",tipo: "Micro controller",ore: 1542},
+    {nome: "Safe Website",tipo: "Web Design",ore: 1263},
+    {nome: "Robotic Arm",tipo: "PLC",ore: 268},];
+
 
 
 
@@ -25,7 +34,7 @@ let element = document.getElementById("carte");
 function calcolaPrezzo(event) {
     event.preventDefault();
     let promocode = document.getElementById("promocode").value;
-    let prmcd = bonusPromo(promocode,codes);
+    let prmcd = bonusPromo(promocode, codes);
     let tipo = document.getElementById("inputState").value;
     let ore = parseFloat(document.getElementById("oreHtml").value);
     let prezzo = 0.0;
@@ -42,7 +51,7 @@ function calcolaPrezzo(event) {
     if (prmcd) {
         prezzo = prezzo * 0.75;
         document.getElementById("prezzoHtml").innerText = "\t\t" + prezzo.toFixed(2) + "€";
-        document.getElementById("promocode").style.color = "green"; 
+        document.getElementById("promocode").style.color = "green";
 
     } else {
         document.getElementById("prezzoHtml").innerText = "\t\t" + prezzo.toFixed(2) + "€";
@@ -69,12 +78,12 @@ function promoCodice(promo) {
 
 
 //bonus funzione  guarda la promo codice se e valio e torna  codice e valido e lo remove di validi codici se no ne e valido o lo usi piu di una volta torna non e valido
-function bonusPromo(promo,lista) {
-    
+function bonusPromo(promo, lista) {
+
     let flag = false;
     for (let i = 0; i < lista.length; i++) {
         if (promo == lista[i]) {
-          delete lista[i];
+            delete lista[i];
             flag = true;
         }
 
