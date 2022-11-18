@@ -127,11 +127,10 @@
         <h1 class="mt-4">WANT AN OFFER?</h1>
       </div>
     </div>
+
+  <form id="forma-lavoro"  onsubmit="calcolaPrezzo(event)">
     <div class="row  justify-content-center g-1 mx-3">
 
-
-
-      <form id="forma-lavoro" onsubmit="btnCalculaPrezzo(event)">
         <div class="col-sm-6">
           <label for="FirstName" class="form-label">First Name</label>
           <input type="text" class="form-control" placeholder="First Name" aria-label="First Name">
@@ -154,7 +153,7 @@
         </div>
 
 
-        <div class="form-group col-sm-6">
+        <div class="form-group col-sm-6" id="selecttipo">
           <label for="inputState">Type of work</label>
           <select id="inputState" class="form-control">
             <option value="1">Frontend Development</option>
@@ -166,7 +165,7 @@
 
         <div class="col-sm-6 mb-4">
           <label for="Discount Code" class="form-label">Discount Code</label>
-          <input type="text" class="form-control" placeholder="Discount code" aria-label="Discount code">
+          <input id="promocode" type="text" class="form-control" placeholder="Discount code" aria-label="Discount code">
         </div>
 
         <div class="col-12">
@@ -177,11 +176,12 @@
         </div>
 
         <div class="col-8-md-d ">
-          <button id="sendHtml" type="button" class="btn btn-warning">Send</button>
+          <button id="sendHtml" type="submit" class="btn btn-primary">Send</button>
 
         </div>
       </form>
     </div>
+
     <div class="row">
       <div class="col-12-md-6 ml-5">
         <h3 id="prezzoHtml"></h3>
