@@ -17,7 +17,7 @@ let codes = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
 
 //Super Bonus: Creare una struttura dati adeguata per contenere tutte le informazioni relative ai progetti presenti nella sezione “Portfolio”. Rimuovere quindi le card dal markup nel file html e stamparle in pagina dinamicamente tramite l’utilizzo di JavaScript.
 let element = document.getElementById("carte");
-element.style.display = "none";
+    element.style.display = "none";
   
 let portfolio =[
     {nome: "Cabin Website",tipo: "Web Design",ore: 240},
@@ -26,6 +26,26 @@ let portfolio =[
     {nome: "Submarine",tipo: "Micro controller",ore: 1542},
     {nome: "Safe Website",tipo: "Web Design",ore: 1263},
     {nome: "Robotic Arm",tipo: "PLC",ore: 268},];
+
+// stampa le projecti in variable che la uso per stampare in HTML doppo
+    let htmlCode = ``;
+   portfolio.forEach(element => {
+    htmlCode = htmlCode + 
+    `
+
+      <div class="col-3 col-md-4 g-3 bg-info border-white p-0 b-0 m-3">
+      <p>Nome di progetto: ${element.nome}</p>
+      <p>Tipo di progetto: ${element.tipo}</p>
+      <p>Ore di progetto:  ${element.ore}</p>
+     </div>
+
+  `;
+   });
+    console.log(htmlCode);
+let cards = document.getElementById("portfolio");
+//seleziona dove mettere html codice e puoi lo inserisce
+cards.innerHTML = htmlCode;
+   
 
 
 
